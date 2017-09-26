@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
+import { OverlayContainer } from '@angular/material';
+
 import * as gridMock from './mock/products.mock';
 import * as echartMock from './mock/echarts.mock';
 
@@ -11,7 +13,21 @@ import { EChartOption, ECharts } from 'echarts-ng2';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  private _dark = false;
+
   gridData: any[] = gridMock.products;
-  chartOption: any = echartMock.chartOption;
+  chartOption: EChartOption = echartMock.chartOption;
+
+  constructor(private oc: OverlayContainer) {
+  }
+  get dark() {
+    return this._dark;
+  }
+
+  switchDarkTheme(dark: boolean) {
+    this._dark = dark;
+    // this.oc.themeClass = dark ? 'app-dark-theme' : null;
+  }
+
 }

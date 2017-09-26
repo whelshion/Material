@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { ShareModule } from './share/share.module';
-import { MaterialModule } from './material/material.module';
-import { KendoModule } from './kendo/kendo.module';
-import { EchartsModule } from './echarts/echarts.module';
+import { AppRouterModule } from './core/app.router.module';
+import { CoreModule } from './core';
+import { ShareModule } from './share';
+import { MaterialModule } from './material';
+import { KendoModule } from './kendo';
+import { EchartsModule } from './echarts';
 
 import { AppComponent } from './app.component';
 
@@ -23,6 +25,9 @@ import 'echarts/theme/dark';
   imports: [
     BrowserModule
     , BrowserAnimationsModule
+    , AppRouterModule
+    , CoreModule
+    , ShareModule
     , MaterialModule
     , KendoModule
     , EchartsModule
