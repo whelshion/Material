@@ -4,6 +4,8 @@ import { ShareModule } from '../share';
 import { MaterialModule } from '../material';
 import { KendoModule } from '../kendo';
 import { EchartsModule } from '../echarts';
+import { DynamicModule } from '../dynamic';
+import { DirectivesModule } from '../directives/directives.module';
 
 import { HeaderComponent } from './header';
 import { FooterComponent } from './footer';
@@ -24,6 +26,8 @@ import { PageNotFoundComponent } from './page-not-found';
     , MaterialModule
     , KendoModule
     , EchartsModule
+    , DynamicModule
+    , DirectivesModule
   ],
   exports: [
     HeaderComponent,
@@ -40,7 +44,7 @@ export class CoreModule {
   }
 }
 
-import {OverlayContainer} from '@angular/material';
+import { OverlayContainer } from '@angular/material';
 export class MyAppModule {
   constructor(overlayContainer: OverlayContainer) {
     // overlayContainer.themeClass = 'app-dark-theme';

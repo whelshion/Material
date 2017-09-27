@@ -8,6 +8,7 @@ import { ShareModule } from './share';
 import { MaterialModule } from './material';
 import { KendoModule } from './kendo';
 import { EchartsModule } from './echarts';
+import { DirectivesModule } from './directives/directives.module';
 
 import { AppComponent } from './app.component';
 
@@ -31,6 +32,7 @@ import 'echarts/theme/dark';
     , MaterialModule
     , KendoModule
     , EchartsModule
+    , DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
