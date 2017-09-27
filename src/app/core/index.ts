@@ -8,6 +8,7 @@ import { EchartsModule } from '../echarts';
 import { HeaderComponent } from './header';
 import { FooterComponent } from './footer';
 import { SidebarComponent } from './sidebar';
+import { MainTabsetComponent } from './main-tabset';
 import { PageNotFoundComponent } from './page-not-found';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { PageNotFoundComponent } from './page-not-found';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    MainTabsetComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -26,7 +28,8 @@ import { PageNotFoundComponent } from './page-not-found';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainTabsetComponent
   ]
 })
 export class CoreModule {
@@ -40,6 +43,6 @@ export class CoreModule {
 import {OverlayContainer} from '@angular/material';
 export class MyAppModule {
   constructor(overlayContainer: OverlayContainer) {
-    overlayContainer.themeClass = 'app-dark-theme';
+    // overlayContainer.themeClass = 'app-dark-theme';
   }
 }

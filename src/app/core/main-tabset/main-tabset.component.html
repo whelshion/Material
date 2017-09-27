@@ -1,0 +1,14 @@
+<md-tab-group class="main-tab-group">
+  <ng-container *ngFor="let tab of tabs">
+    <md-tab *ngIf="tab.show">
+      <ng-template md-tab-label>
+        <span>{{tab.label}}</span>
+        <ng-container>
+          <md-icon mdTooltip="关闭" mdTooltipPosition="right" (click)="onTabClose($event,tab)">close</md-icon>
+        </ng-container>
+      </ng-template>
+      <div class="main-tab-content">
+      </div>
+    </md-tab>
+  </ng-container>
+</md-tab-group>
