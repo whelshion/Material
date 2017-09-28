@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { ShareModule } from '../share';
+import { SharedModule } from '../shared';
 import { MaterialModule } from '../material';
 import { KendoModule } from '../kendo';
 import { EchartsModule } from '../echarts';
@@ -12,7 +12,7 @@ import { DyTaskListComponent } from './dy-task-list';
     DyTaskListComponent
   ],
   imports: [
-    ShareModule
+    SharedModule
     , MaterialModule
     , KendoModule
     , EchartsModule

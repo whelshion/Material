@@ -1,14 +1,21 @@
-<md-tab-group class="main-tab-group">
-  <ng-container *ngFor="let tab of tabs">
-    <md-tab *ngIf="tab.show">
+<md-tab-group dynamicHeight [(selectedIndex)]="activeTabIndex" class="main-tab-group">
+  <ng-container *ngFor="let tab of dynamicTabs">
+    <md-tab [disabled]="tab.disabled">
       <ng-template md-tab-label>
         <span>{{tab.label}}</span>
         <ng-container>
-          <md-icon mdTooltip="关闭" mdTooltipPosition="right" (click)="onTabClose($event,tab)">close</md-icon>
+          <md-icon mdTooltip="关闭" mdTooltipPosition="right" (click)="deleteTab(tab)">close</md-icon>
         </ng-container>
       </ng-template>
       <div class="main-tab-content">
-        <div [app-html-outlet]="''" [html]="'<app-dy-task-list></app-dy-task-list>'"></div>
+        <div [appHtmlOutlet]="''" [html]="componentMap[tab.view]"></div>
+        <md-form-field>
+          <input mdInput placeholder="Tab Label" [(ngModel)]="tab.label">
+        </md-form-field>
+        <br><br>
+        <button md-raised-button [disabled]="dynamicTabs.length == 1" (click)="addTab(false)">
+          添加TAB
+        </button>
       </div>
     </md-tab>
   </ng-container>

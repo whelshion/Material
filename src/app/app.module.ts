@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRouterModule } from './core/app.router.module';
 import { CoreModule } from './core';
-import { ShareModule } from './share';
+import { SharedModule } from './shared';
 import { MaterialModule } from './material';
 import { KendoModule } from './kendo';
 import { EchartsModule } from './echarts';
-import { DirectivesModule } from './directives/directives.module';
+import { DirectiveModule } from './directives/directive.module';
 
 import { AppComponent } from './app.component';
 
@@ -28,11 +28,11 @@ import 'echarts/theme/dark';
     , BrowserAnimationsModule
     , AppRouterModule
     , CoreModule
-    , ShareModule
+    , SharedModule
     , MaterialModule
     , KendoModule
     , EchartsModule
-    , DirectivesModule
+    , DirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

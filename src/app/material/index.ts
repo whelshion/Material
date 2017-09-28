@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import {
   MdToolbarModule,
   MdSidenavModule,
+  MdSliderModule,
   MdAutocompleteModule,
   MdButtonModule,
   MdButtonToggleModule,
@@ -23,12 +24,13 @@ import {
   MdTooltipModule,
   MatSelectModule,
   MdSlideToggleModule
- } from '@angular/material';
+} from '@angular/material';
 
 @NgModule({
   imports: [
     MdInputModule,
     MdSelectModule,
+    MdSliderModule,
     MdButtonToggleModule,
     MdCardModule,
     MdButtonModule,
@@ -54,6 +56,7 @@ import {
   exports: [
     MdInputModule,
     MdSelectModule,
+    MdSliderModule,
     MdButtonToggleModule,
     MdCardModule,
     MdButtonModule,

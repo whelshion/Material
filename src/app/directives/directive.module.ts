@@ -1,6 +1,6 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 
-import { ShareModule } from '../share';
+import { SharedModule } from '../shared';
 import { MaterialModule } from '../material';
 import { KendoModule } from '../kendo';
 import { EchartsModule } from '../echarts';
@@ -13,7 +13,7 @@ import { HtmlOutletDirective } from './html-outlet/html-outlet.directive';
     HtmlOutletDirective
   ],
   imports: [
-    ShareModule
+    SharedModule
     , MaterialModule
     , KendoModule
     , EchartsModule
@@ -23,6 +23,6 @@ import { HtmlOutletDirective } from './html-outlet/html-outlet.directive';
     HtmlOutletDirective
   ]
 })
-export class DirectivesModule {
+export class DirectiveModule {
   constructor() {}
   }
