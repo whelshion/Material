@@ -22,7 +22,6 @@ import {
   MdSelectModule,
   MdTabsModule,
   MdTooltipModule,
-  MatSelectModule,
   MdSlideToggleModule
 } from '@angular/material';
 
@@ -50,8 +49,7 @@ import {
     MdTooltipModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdSlideToggleModule,
-    MatSelectModule
+    MdSlideToggleModule
   ],
   exports: [
     MdInputModule,
@@ -76,8 +74,7 @@ import {
     MdTooltipModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdSlideToggleModule,
-    MatSelectModule
+    MdSlideToggleModule
   ],
   declarations: []
 })

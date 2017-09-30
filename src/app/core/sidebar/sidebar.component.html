@@ -1,3 +1,11 @@
-<p>
-  sidebar works!
-</p>
+<md-nav-list>
+  <ng-container *ngFor="let group of groups">
+    <h3 md-subheader>{{group.name}}</h3>
+    <md-list-item *ngFor="let menu of group.menus">
+      <md-icon md-list-icon>folder</md-icon>
+      <h4 md-line>{{menu.name}}</h4>
+      <p md-line> {{menu.link}} </p>
+    </md-list-item>
+    <md-divider></md-divider>
+  </ng-container>
+</md-nav-list>
